@@ -6,15 +6,15 @@ class Input {
   InputInput input;
 
   /** Create new Input from JSON data */
-  Input.fromJson(Map json) {
+  Input.fromJson(core.Map json) {
     if (json.containsKey("input")) {
       input = new InputInput.fromJson(json["input"]);
     }
   }
 
   /** Create JSON Object for Input */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (input != null) {
       output["input"] = input.toJson();
@@ -24,7 +24,7 @@ class Input {
   }
 
   /** Return String representation of Input */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -32,44 +32,44 @@ class Input {
 class InputInput {
 
   /** Create new InputInput from JSON data */
-  InputInput.fromJson(Map json) {
+  InputInput.fromJson(core.Map json) {
   }
 
   /** Create JSON Object for InputInput */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
 
     return output;
   }
 
   /** Return String representation of InputInput */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class Output {
 
   /** The unique name for the predictive model. */
-  String id;
+  core.String id;
 
   /** What kind of resource this is. */
-  String kind;
+  core.String kind;
 
   /** The most likely class label [Categorical models only]. */
-  String outputLabel;
+  core.String outputLabel;
 
   /** A list of class labels with their estimated probabilities [Categorical models only]. */
-  List<OutputOutputMulti> outputMulti;
+  core.List<OutputOutputMulti> outputMulti;
 
   /** The estimated regression value [Regression models only]. */
-  num outputValue;
+  core.num outputValue;
 
   /** A URL to re-request this resource. */
-  String selfLink;
+  core.String selfLink;
 
   /** Create new Output from JSON data */
-  Output.fromJson(Map json) {
+  Output.fromJson(core.Map json) {
     if (json.containsKey("id")) {
       id = json["id"];
     }
@@ -94,8 +94,8 @@ class Output {
   }
 
   /** Create JSON Object for Output */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (id != null) {
       output["id"] = id;
@@ -107,7 +107,7 @@ class Output {
       output["outputLabel"] = outputLabel;
     }
     if (outputMulti != null) {
-      output["outputMulti"] = new List();
+      output["outputMulti"] = new core.List();
       outputMulti.forEach((item) {
         output["outputMulti"].add(item.toJson());
       });
@@ -123,20 +123,20 @@ class Output {
   }
 
   /** Return String representation of Output */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class OutputOutputMulti {
 
   /** The class label. */
-  String label;
+  core.String label;
 
   /** The probability of the class label. */
-  num score;
+  core.num score;
 
   /** Create new OutputOutputMulti from JSON data */
-  OutputOutputMulti.fromJson(Map json) {
+  OutputOutputMulti.fromJson(core.Map json) {
     if (json.containsKey("label")) {
       label = json["label"];
     }
@@ -146,8 +146,8 @@ class OutputOutputMulti {
   }
 
   /** Create JSON Object for OutputOutputMulti */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (label != null) {
       output["label"] = label;
@@ -160,7 +160,7 @@ class OutputOutputMulti {
   }
 
   /** Return String representation of OutputOutputMulti */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -170,34 +170,34 @@ class Training {
   TrainingDataAnalysis dataAnalysis;
 
   /** The unique name for the predictive model. */
-  String id;
+  core.String id;
 
   /** What kind of resource this is. */
-  String kind;
+  core.String kind;
 
   /** Model metadata. */
   TrainingModelInfo modelInfo;
 
   /** A URL to re-request this resource. */
-  String selfLink;
+  core.String selfLink;
 
   /** Google storage location of the training data file. */
-  String storageDataLocation;
+  core.String storageDataLocation;
 
   /** Google storage location of the preprocessing pmml file. */
-  String storagePMMLLocation;
+  core.String storagePMMLLocation;
 
   /** Google storage location of the pmml model file. */
-  String storagePMMLModelLocation;
+  core.String storagePMMLModelLocation;
 
   /** The current status of the training job. This can be one of following: RUNNING; DONE; ERROR; ERROR: TRAINING JOB NOT FOUND */
-  String trainingStatus;
+  core.String trainingStatus;
 
   /** A class weighting function, which allows the importance weights for class labels to be specified [Categorical models only]. */
-  List<TrainingUtility> utility;
+  core.List<TrainingUtility> utility;
 
   /** Create new Training from JSON data */
-  Training.fromJson(Map json) {
+  Training.fromJson(core.Map json) {
     if (json.containsKey("dataAnalysis")) {
       dataAnalysis = new TrainingDataAnalysis.fromJson(json["dataAnalysis"]);
     }
@@ -234,8 +234,8 @@ class Training {
   }
 
   /** Create JSON Object for Training */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (dataAnalysis != null) {
       output["dataAnalysis"] = dataAnalysis.toJson();
@@ -265,7 +265,7 @@ class Training {
       output["trainingStatus"] = trainingStatus;
     }
     if (utility != null) {
-      output["utility"] = new List();
+      output["utility"] = new core.List();
       utility.forEach((item) {
         output["utility"].add(item.toJson());
       });
@@ -275,16 +275,16 @@ class Training {
   }
 
   /** Return String representation of Training */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 /** Data Analysis. */
 class TrainingDataAnalysis {
-  List<String> warnings;
+  core.List<core.String> warnings;
 
   /** Create new TrainingDataAnalysis from JSON data */
-  TrainingDataAnalysis.fromJson(Map json) {
+  TrainingDataAnalysis.fromJson(core.Map json) {
     if (json.containsKey("warnings")) {
       warnings = [];
       json["warnings"].forEach((item) {
@@ -294,11 +294,11 @@ class TrainingDataAnalysis {
   }
 
   /** Create JSON Object for TrainingDataAnalysis */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (warnings != null) {
-      output["warnings"] = new List();
+      output["warnings"] = new core.List();
       warnings.forEach((item) {
         output["warnings"].add(item);
       });
@@ -308,7 +308,7 @@ class TrainingDataAnalysis {
   }
 
   /** Return String representation of TrainingDataAnalysis */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -316,10 +316,10 @@ class TrainingDataAnalysis {
 class TrainingModelInfo {
 
   /** Estimated accuracy of model taking utility weights into account [Categorical models only]. */
-  num classWeightedAccuracy;
+  core.num classWeightedAccuracy;
 
   /** A number between 0.0 and 1.0, where 1.0 is 100% accurate. This is an estimate, based on the amount and quality of the training data, of the estimated prediction accuracy. You can use this is a guide to decide whether the results are accurate enough for your needs. This estimate will be more reliable if your real input data is similar to your training data [Categorical models only]. */
-  num classificationAccuracy;
+  core.num classificationAccuracy;
 
   /** An output confusion matrix. This shows an estimate for how this model will do in predictions. This is first indexed by the true class label. For each true class label, this provides a pair {predicted_label, count}, where count is the estimated number of times the model will predict the predicted label given the true label. Will not output if more then 100 classes [Categorical models only]. */
   TrainingModelInfoConfusionMatrix confusionMatrix;
@@ -328,19 +328,19 @@ class TrainingModelInfo {
   TrainingModelInfoConfusionMatrixRowTotals confusionMatrixRowTotals;
 
   /** An estimated mean squared error. The can be used to measure the quality of the predicted model [Regression models only]. */
-  num meanSquaredError;
+  core.num meanSquaredError;
 
   /** Type of predictive model (CLASSIFICATION or REGRESSION) */
-  String modelType;
+  core.String modelType;
 
   /** Number of valid data instances used in the trained model. */
-  String numberInstances;
+  core.String numberInstances;
 
   /** Number of class labels in the trained model [Categorical models only]. */
-  String numberLabels;
+  core.String numberLabels;
 
   /** Create new TrainingModelInfo from JSON data */
-  TrainingModelInfo.fromJson(Map json) {
+  TrainingModelInfo.fromJson(core.Map json) {
     if (json.containsKey("classWeightedAccuracy")) {
       classWeightedAccuracy = json["classWeightedAccuracy"];
     }
@@ -368,8 +368,8 @@ class TrainingModelInfo {
   }
 
   /** Create JSON Object for TrainingModelInfo */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (classWeightedAccuracy != null) {
       output["classWeightedAccuracy"] = classWeightedAccuracy;
@@ -400,7 +400,7 @@ class TrainingModelInfo {
   }
 
   /** Return String representation of TrainingModelInfo */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -408,19 +408,19 @@ class TrainingModelInfo {
 class TrainingModelInfoConfusionMatrix {
 
   /** Create new TrainingModelInfoConfusionMatrix from JSON data */
-  TrainingModelInfoConfusionMatrix.fromJson(Map json) {
+  TrainingModelInfoConfusionMatrix.fromJson(core.Map json) {
   }
 
   /** Create JSON Object for TrainingModelInfoConfusionMatrix */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
 
     return output;
   }
 
   /** Return String representation of TrainingModelInfoConfusionMatrix */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -428,19 +428,19 @@ class TrainingModelInfoConfusionMatrix {
 class TrainingModelInfoConfusionMatrixRowTotals {
 
   /** Create new TrainingModelInfoConfusionMatrixRowTotals from JSON data */
-  TrainingModelInfoConfusionMatrixRowTotals.fromJson(Map json) {
+  TrainingModelInfoConfusionMatrixRowTotals.fromJson(core.Map json) {
   }
 
   /** Create JSON Object for TrainingModelInfoConfusionMatrixRowTotals */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
 
     return output;
   }
 
   /** Return String representation of TrainingModelInfoConfusionMatrixRowTotals */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -448,32 +448,32 @@ class TrainingModelInfoConfusionMatrixRowTotals {
 class TrainingUtility {
 
   /** Create new TrainingUtility from JSON data */
-  TrainingUtility.fromJson(Map json) {
+  TrainingUtility.fromJson(core.Map json) {
   }
 
   /** Create JSON Object for TrainingUtility */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
 
     return output;
   }
 
   /** Return String representation of TrainingUtility */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class Update {
 
   /** The class label of this instance */
-  String label;
+  core.String label;
 
   /** The generic output value - could be regression value or class label */
-  String output;
+  core.String output;
 
   /** Create new Update from JSON data */
-  Update.fromJson(Map json) {
+  Update.fromJson(core.Map json) {
     if (json.containsKey("label")) {
       label = json["label"];
     }
@@ -483,8 +483,8 @@ class Update {
   }
 
   /** Create JSON Object for Update */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (label != null) {
       output["label"] = label;
@@ -497,7 +497,7 @@ class Update {
   }
 
   /** Return String representation of Update */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
