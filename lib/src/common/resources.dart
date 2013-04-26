@@ -1,8 +1,8 @@
 part of prediction_v1_4_api_client;
 
-class HostedmodelsResource extends Resource {
+class HostedmodelsResource_ extends Resource {
 
-  HostedmodelsResource(Client client) : super(client) {
+  HostedmodelsResource_(Client client) : super(client) {
   }
 
   /**
@@ -32,7 +32,7 @@ class HostedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -45,9 +45,9 @@ class HostedmodelsResource extends Resource {
   }
 }
 
-class TrainedmodelsResource extends Resource {
+class TrainedmodelsResource_ extends Resource {
 
-  TrainedmodelsResource(Client client) : super(client) {
+  TrainedmodelsResource_(Client client) : super(client) {
   }
 
   /**
@@ -75,7 +75,7 @@ class TrainedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -112,7 +112,7 @@ class TrainedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -147,7 +147,7 @@ class TrainedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -186,7 +186,7 @@ class TrainedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -225,7 +225,7 @@ class TrainedmodelsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
