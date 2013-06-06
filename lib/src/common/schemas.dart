@@ -334,10 +334,10 @@ class TrainingModelInfo {
   core.String modelType;
 
   /** Number of valid data instances used in the trained model. */
-  core.String numberInstances;
+  core.int numberInstances;
 
   /** Number of class labels in the trained model [Categorical models only]. */
-  core.String numberLabels;
+  core.int numberLabels;
 
   /** Create new TrainingModelInfo from JSON data */
   TrainingModelInfo.fromJson(core.Map json) {
