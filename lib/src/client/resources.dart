@@ -1,9 +1,11 @@
-part of prediction_v1_4_api_client;
+part of prediction_v1_4_api;
 
-class HostedmodelsResource_ extends Resource {
+class HostedmodelsResource_ {
 
-  HostedmodelsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  HostedmodelsResource_(Client client) :
+      _client = client;
 
   /**
    * Submit input and request an output against a hosted model.
@@ -41,10 +43,12 @@ class HostedmodelsResource_ extends Resource {
   }
 }
 
-class TrainedmodelsResource_ extends Resource {
+class TrainedmodelsResource_ {
 
-  TrainedmodelsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  TrainedmodelsResource_(Client client) :
+      _client = client;
 
   /**
    * Delete a trained model.
