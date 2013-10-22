@@ -2,7 +2,7 @@ library prediction_v1_4_api.console;
 
 import "package:google_oauth2_client/google_oauth2_console.dart" as oauth2;
 
-import 'package:google_prediction_v1_4_api/src/cloud_api_console.dart';
+import 'package:google_prediction_v1_4_api/src/console_client.dart';
 
 import "package:google_prediction_v1_4_api/prediction_v1_4_api_client.dart";
 
